@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { PageComponent } from './page/page.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { Terminal } from 'xterm';
+
 
 @NgModule({
   declarations: [		
@@ -16,7 +18,8 @@ import { LoginComponent } from './login/login.component';
    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    Terminal
   ],
   providers: [],
   bootstrap: [AppComponent]

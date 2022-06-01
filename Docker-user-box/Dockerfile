@@ -66,7 +66,7 @@ RUN python3 -m pip install updog name-that-hash search-that-hash && \
     python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git && \
     python3 -m pip install git+https://github.com/calebstewart/paramiko && \
     python3 -m pip install ciphey --upgrade && \
-    wget -O /tmp/get-pip.py "https://bootstrap.pypa.io/pip/2.7/get-pip.py" && python2 /tmp/get-pip.py && rm /tmp/get-pip.py
+    wget -O /tmp/get-pip.py "https://bootstrap.pypa.io/pip/3.4/get-pip.py" && python2 /tmp/get-pip.py && rm /tmp/get-pip.py
 
 # clone usefull repos
 RUN mkdir -p /opt/repos && \
@@ -116,8 +116,8 @@ RUN mkdir -p /opt/external && \
     wget -O /opt/external/PrivescCheck.ps1 https://raw.githubusercontent.com/itm4n/PrivescCheck/master/PrivescCheck.ps1 && \
     wget -O /opt/external/SharpHound.exe https://github.com/BloodHoundAD/BloodHound/raw/master/Collectors/SharpHound.exe
 
-COPY ./default-config/bashrc /home/kali/.bashrc
-COPY ./default-config/zshrc /home/kali/.zshrc
+# COPY ./default-config/bashrc /home/kali/.bashrc
+# COPY ./default-config/zshrc /home/kali/.zshrc
 
 # other tools
 RUN mkdir -p /usr/local/bin && \
